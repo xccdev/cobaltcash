@@ -17,3 +17,9 @@ Cobalt Cash is released under the terms of the MIT license. See COPYING for more
 The master branch is meant to be stable. Development is normally done in separate branches. Tags are created to indicate new official, stable release versions of Dash Core.
 
 ---
+
+## What is a Masternode?
+
+Masternode is...
+
+---

@@ -112,7 +112,7 @@ public:
         nMaxMoneyOut = 210000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 24000;
         nModifierUpdateBlock = 1; // we use the version 2 for BITG
 
         /**
@@ -218,7 +218,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Bitcoin Green: 1 day
         nTargetSpacing = 2 * 60;  // Bitcoin Green: 1 minute
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 42000;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;

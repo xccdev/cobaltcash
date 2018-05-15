@@ -112,7 +112,7 @@ public:
         nMaxMoneyOut = 210000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 24000;
+        nLastPOWBlock = 1680;
         nModifierUpdateBlock = 1; // we use the version 2 for BITG
 
         /**

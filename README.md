@@ -49,3 +49,10 @@ Common `host-platform-triplets` for cross compilation are:
 - `x86_64-apple-darwin11` for MacOSX
 - `arm-linux-gnueabihf` for Linux ARM 32 bit
 - `aarch64-linux-gnu` for Linux ARM 64 bit
+
+Now Check for :
+
+- /src/cobaltcash-cli
+- /src/cobaltcashd
+- /src/cobaltcash-tx
+- /src/qt/cobaltcash-qt

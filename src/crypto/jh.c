@@ -195,7 +195,7 @@ static const sph_u64 C[] = {
 	C64e(0x2f9833b3b1bc765e), C64e(0x2bd666a5efc4e62a),
 	C64e(0x06f4b6e8bec1d436), C64e(0x74ee8215bcef2163),
 	C64e(0xfdc14e0df453c969), C64e(0xa77d5ac406585826),
-	C64e(0x7ec11.0.06e0fa16), C64e(0x7e90af3d28639d3f),
+	C64e(0x7ec1141606e0fa16), C64e(0x7e90af3d28639d3f),
 	C64e(0xd2c9f2e3009bd20c), C64e(0x5faace30b7d40c30),
 	C64e(0x742a5116f2e03298), C64e(0x0deb30d8e3cef89a),
 	C64e(0x4bc59e7bb5f17992), C64e(0xff51e66e048668d3),
@@ -334,7 +334,7 @@ static const sph_u64 IV224[] = {
 
 static const sph_u64 IV256[] = {
 	C64e(0xeb98a3412c20d3eb), C64e(0x92cdbe7b9cb245c1),
-	C64e(0x1c9351.0.0d4c7fa), C64e(0x260082d67e508a03),
+	C64e(0x1c93519160d4c7fa), C64e(0x260082d67e508a03),
 	C64e(0xa4239e267726b945), C64e(0xe0fb1a48d41a9477),
 	C64e(0xcdb5ab26026b177a), C64e(0x56f024420fff2fa8),
 	C64e(0x71a396897f2e4d75), C64e(0x1d144908f77de262),

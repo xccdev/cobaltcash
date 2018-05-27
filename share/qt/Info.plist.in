@@ -29,10 +29,10 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>CobaltCash-Qt</string>
+  <string>BitcoinGreen-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.savebitcoin.CobaltCash-Qt</string>
+  <string>io.savebitcoin.BitcoinGreen-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.savebitcoin.CobaltCashPayment</string>
+      <string>io.savebitcoin.BitcoinGreenPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>cobaltcash</string>

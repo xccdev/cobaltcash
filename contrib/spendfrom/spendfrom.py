@@ -35,9 +35,9 @@ def check_json_precision():
 def determine_db_dir():
     """Return the default location of the cobaltcash data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/CobaltCash/")
+        return os.path.expanduser("~/Library/Application Support/BitcoinGreen/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "CobaltCash")
+        return os.path.join(os.environ['APPDATA'], "BitcoinGreen")
     return os.path.expanduser("~/.cobaltcash")
 
 def read_bitcoin_config(dbdir):

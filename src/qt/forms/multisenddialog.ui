@@ -113,7 +113,7 @@ MultiSend will not be activated unless you have clicked Activate</string>
             <string>Enter whole numbers 1 - 100</string>
            </property>
            <property name="placeholderText">
-            <string>Enter % to Give (1.0.0)</string>
+            <string>Enter % to Give (1-100)</string>
            </property>
           </widget>
          </item>

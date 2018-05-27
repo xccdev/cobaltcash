@@ -1,6 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2018 The Cobalt Cash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +18,7 @@
 #include <boost/foreach.hpp>
 #include <boost/unordered_map.hpp>
 
-/**
+/** 
 
     ****Note - for Cobalt Cash we added fCoinStake to the 2nd bit. Keep in mind when reading the following and adjust as needed.
  * Pruned version of CTransaction: only retains metadata and unspent transaction outputs
@@ -54,7 +53,7 @@
  *    - height = 203998
  *
  *
- * Example: 0109044086ef97d5790061b01caab50f1b8e9c50a5057eb43c2d9563a4eebbd123008c988f1a4a4de21.0.0f50aac7f17e7f9555caa486af3b
+ * Example: 0109044086ef97d5790061b01caab50f1b8e9c50a5057eb43c2d9563a4eebbd123008c988f1a4a4de2161e0f50aac7f17e7f9555caa486af3b
  *          <><><--><--------------------------------------------------><----------------------------------------------><---->
  *         /  \   \                     |                                                           |                     /
  *  version  code  unspentness       vout[4]                                                     vout[16]           height
@@ -66,10 +65,10 @@
  *             * 86ef97d579: compact amount representation for 234925952 (2.35 BTC)
  *             * 00: special txout type pay-to-pubkey-hash
  *             * 61b01caab50f1b8e9c50a5057eb43c2d9563a4ee: address uint160
- *  - vout[16]: bbd123008c988f1a4a4de21.0.0f50aac7f17e7f9555caa4
+ *  - vout[16]: bbd123008c988f1a4a4de2161e0f50aac7f17e7f9555caa4
  *              * bbd123: compact amount representation for 110397 (0.001 BTC)
  *              * 00: special txout type pay-to-pubkey-hash
- *              * 8c988f1a4a4de21.0.0f50aac7f17e7f9555caa4: address uint160
+ *              * 8c988f1a4a4de2161e0f50aac7f17e7f9555caa4: address uint160
  *  - height = 120891
  */
 class CCoins
@@ -389,10 +388,10 @@ enum {
 static const unsigned int STANDARD_LOCKTIME_VERIFY_FLAGS = LOCKTIME_VERIFY_SEQUENCE |
                                                            LOCKTIME_MEDIAN_TIME_PAST;
 
-/**
+/** 
  * A reference to a mutable cache entry. Encapsulating it allows us to run
  *  cleanup code after the modification is finished, and keeping track of
- *  concurrent modifications.
+ *  concurrent modifications. 
  */
 class CCoinsModifier
 {
@@ -417,7 +416,7 @@ protected:
 
     /**
      * Make mutable so that we can "fill the cache" even from Get-methods
-     * declared as "const".
+     * declared as "const".  
      */
     mutable uint256 hashBlock;
     mutable CCoinsMap cacheCoins;
@@ -457,7 +456,7 @@ public:
     //! Calculate the size of the cache (in number of transactions)
     unsigned int GetCacheSize() const;
 
-    /**
+    /** 
      * Amount of cobalt cash coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.

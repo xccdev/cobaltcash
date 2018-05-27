@@ -975,8 +975,8 @@ MultiSend: %1</translation>
         <translation>средне-высокий</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ubitg per input.</source>
-        <translation>Может вариировать +/- %1 ubitg к вводу</translation>
+        <source>Can vary +/- %1 uxcc per input.</source>
+        <translation>Может вариировать +/- %1 uxcc к вводу</translation>
     </message>
     <message>
         <source>medium</source>

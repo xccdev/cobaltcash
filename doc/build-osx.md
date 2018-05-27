@@ -81,7 +81,7 @@ Creating a release build
 ------------------------
 You can ignore this section if you are building `cobaltcashd` for your own use.
 
-cobaltcashd/cobaltcash-cli binaries are not included in the CobaltCash-Qt.app bundle.
+cobaltcashd/cobaltcash-cli binaries are not included in the BitcoinGreen-Qt.app bundle.
 
 If you are building `cobaltcashd` or `cobaltcash-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -92,7 +92,7 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see release-process.md for how the CobaltCash-Qt.app
+Once dependencies are compiled, see release-process.md for how the BitcoinGreen-Qt.app
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running
@@ -104,14 +104,14 @@ directory. We have to first create the RPC configuration file, though.
 Run `./cobaltcashd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=cobaltcashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/CobaltCash/cobaltcash.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/CobaltCash/cobaltcash.conf"
+    echo -e "rpcuser=cobaltcashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/BitcoinGreen/cobaltcash.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/BitcoinGreen/cobaltcash.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/CobaltCash/debug.log
+    tail -f $HOME/Library/Application\ Support/BitcoinGreen/debug.log
 
 Other commands:
 -------

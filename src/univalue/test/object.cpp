@@ -1,6 +1,5 @@
 // Copyright (c) 2014 BitPay Inc.
 // Copyright (c) 2014-2016 The Bitcoin Core developers
-// Copyright (c) 2018 The Cobalt Cash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -306,7 +305,7 @@ BOOST_AUTO_TEST_CASE(univalue_object)
 }
 
 static const char *json1 =
-"[1.0.000000,{\"key1\":\"str\\u0000\",\"key2\":800,\"key3\":{\"name\":\"martian http://test.com\"}}]";
+"[1.10000000,{\"key1\":\"str\\u0000\",\"key2\":800,\"key3\":{\"name\":\"martian http://test.com\"}}]";
 
 BOOST_AUTO_TEST_CASE(univalue_readwrite)
 {
@@ -319,7 +318,7 @@ BOOST_AUTO_TEST_CASE(univalue_readwrite)
     BOOST_CHECK(v.isArray());
     BOOST_CHECK_EQUAL(v.size(), 2);
 
-    BOOST_CHECK_EQUAL(v[0].getValStr(), "1.0.000000");
+    BOOST_CHECK_EQUAL(v[0].getValStr(), "1.10000000");
 
     UniValue obj = v[1];
     BOOST_CHECK(obj.isObject());

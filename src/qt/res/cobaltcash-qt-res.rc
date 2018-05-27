@@ -20,7 +20,7 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "CobaltCash"
-            VALUE "FileDescription",    "Cobalt Cash Core (OSS GUI client for Bitcoin Green)"
+            VALUE "FileDescription",    "Cobalt Cash Core (OSS GUI client for Cobalt Cash)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "cobaltcash-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR

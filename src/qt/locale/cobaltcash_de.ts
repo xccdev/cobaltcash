@@ -3731,7 +3731,7 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
     </message>
     <message>
         <source>Copyright (C) 2018-%i The Cobalt Cash Core Developers</source>
-        <translation>Copyright (C) 2017-%i The Cobalt Cash Core Developers</translation>
+        <translation>Copyright (C) %i The Cobalt Cash Core Developers</translation>
     </message>
     <message>
         <source>Error</source>

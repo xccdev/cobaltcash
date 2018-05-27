@@ -1,5 +1,4 @@
 // Copyright (c) 2009-2013 The Bitcoin developers
-// Copyright (c) 2018 The Cobalt Cash developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -65,7 +64,7 @@ public:
     bool IsRFC1918() const;                      // IPv4 private networks (10.0.0.0/8, 192.168.0.0/16, 172.16.0.0/12)
     bool IsRFC2544() const;                      // IPv4 inter-network communcations (192.18.0.0/15)
     bool IsRFC6598() const;                      // IPv4 ISP-level NAT (100.64.0.0/10)
-    bool IsRFC5737() const;                      // IPv4 documentation addresses (192.0.2.0/24, 198.51.0.0.0/24, 203.0.113.0/24)
+    bool IsRFC5737() const;                      // IPv4 documentation addresses (192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24)
     bool IsRFC3849() const;                      // IPv6 documentation address (2001:0DB8::/32)
     bool IsRFC3927() const;                      // IPv4 autoconfig (169.254.0.0/16)
     bool IsRFC3964() const;                      // IPv6 6to4 tunnelling (2002::/16)

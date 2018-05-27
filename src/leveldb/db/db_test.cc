@@ -1130,14 +1130,14 @@ TEST(DBTest, ApproximateSizes_MixOfSmallAndLarge) {
       ASSERT_TRUE(Between(Size("", Key(0)), 0, 0));
       ASSERT_TRUE(Between(Size("", Key(1)), 10000, 11000));
       ASSERT_TRUE(Between(Size("", Key(2)), 20000, 21000));
-      ASSERT_TRUE(Between(Size("", Key(3)), 120000, 121000));
-      ASSERT_TRUE(Between(Size("", Key(4)), 130000, 131000));
+      ASSERT_TRUE(Between(Size("", Key(3)), 120000, 1.0.00));
+      ASSERT_TRUE(Between(Size("", Key(4)), 130000, 1.0.00));
       ASSERT_TRUE(Between(Size("", Key(5)), 230000, 231000));
       ASSERT_TRUE(Between(Size("", Key(6)), 240000, 241000));
       ASSERT_TRUE(Between(Size("", Key(7)), 540000, 541000));
       ASSERT_TRUE(Between(Size("", Key(8)), 550000, 560000));
 
-      ASSERT_TRUE(Between(Size(Key(3), Key(5)), 110000, 111000));
+      ASSERT_TRUE(Between(Size(Key(3), Key(5)), 110000, 1.0.00));
 
       dbfull()->TEST_CompactRange(0, NULL, NULL);
     }

@@ -1,28 +1,28 @@
-Bitcoin Green Core
+Cobalt Cash Core
 =====================
 
 Setup
 ---------------------
-[Bitcoin Green Core](http://savebitcoin.io) is the original Bitcoin Green client and it builds the backbone of the network. However, it downloads and stores the entire history of Bitcoin Green transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Cobalt Cash Core](http://savebitcoin.io) is the original Cobalt Cash client and it builds the backbone of the network. However, it downloads and stores the entire history of Cobalt Cash transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Bitcoin Green on your native platform.
+The following are some helpful notes on how to run Cobalt Cash on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- bin/32/bitcoingreen-qt (GUI, 32-bit) or bin/32/bitcoingreend (headless, 32-bit)
-- bin/64/bitcoingreen-qt (GUI, 64-bit) or bin/64/bitcoingreend (headless, 64-bit)
+- bin/32/cobaltcash-qt (GUI, 32-bit) or bin/32/cobaltcashd (headless, 32-bit)
+- bin/64/cobaltcash-qt (GUI, 64-bit) or bin/64/cobaltcashd (headless, 64-bit)
 
 ### Windows
 
-Unpack the files into a directory, and then run bitcoingreen-qt.exe.
+Unpack the files into a directory, and then run cobaltcash-qt.exe.
 
 ### OSX
 
-Drag BitcoinGreen-Qt to your applications folder, and then run BitcoinGreen-Qt.
+Drag CobaltCash-Qt to your applications folder, and then run CobaltCash-Qt.
 
 ### Need Help?
 
@@ -30,7 +30,7 @@ Drag BitcoinGreen-Qt to your applications folder, and then run BitcoinGreen-Qt.
 
 Building
 ---------------------
-The following are developer notes on how to build Bitcoin Green on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Cobalt Cash on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -38,7 +38,7 @@ The following are developer notes on how to build Bitcoin Green on your native p
 
 Development
 ---------------------
-The Bitcoin Green repo's [root README](https://github.com/bitcoingreen/bitcoingreen/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Cobalt Cash repo's [root README](https://github.com/cobaltcash/cobaltcash/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

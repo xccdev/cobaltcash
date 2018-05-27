@@ -14,7 +14,7 @@
 #include "timedata.h"
 #include "util.h"
 
-#define MASTERNODE_MIN_CONFIRMATIONS 500
+#define MASTERNODE_MIN_CONFIRMATIONS 15
 #define MASTERNODE_MIN_MNP_SECONDS (10 * 60)
 #define MASTERNODE_MIN_MNB_SECONDS (5 * 60)
 #define MASTERNODE_PING_SECONDS (5 * 60)
@@ -102,7 +102,7 @@ public:
 };
 
 //
-// The Masternode Class. It contains the input of the BITG collateral, signature to prove
+// The Masternode Class. It contains the input of the XCC collateral, signature to prove
 // it's the one who own that ip address and code for calculating the payment election.
 //
 class CMasternode

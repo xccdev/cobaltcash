@@ -139,7 +139,7 @@ parameters are varied.  For the baseline:</p>
     <td class="c2">129,000 ops/sec</td>
     <td class="c3"><div class="bldb" style="width:298px">&nbsp;</div></td>
 <tr><td class="c1">Kyoto TreeDB</td>
-    <td class="c2">151,000 ops/sec</td>
+    <td class="c2">1.0.000 ops/sec</td>
     <td class="c3"><div class="bkct" style="width:350px">&nbsp;</div></td>
 <tr><td class="c1">SQLite3</td>
     <td class="c2">134,000 ops/sec</td>
@@ -178,7 +178,7 @@ parameters are varied.  For the baseline:</p>
 <h4>Sequential Writes</h4>
 <table class="bn bnbase">
 <tr><td class="c1">LevelDB</td>
-    <td class="c2">1,100 ops/sec</td>
+    <td class="c2">1.0.0 ops/sec</td>
     <td class="c3"><div class="bldb" style="width:234px">&nbsp;</div></td></tr>
 <tr><td class="c1">Kyoto TreeDB</td>
     <td class="c2">1,000 ops/sec</td>
@@ -193,7 +193,7 @@ parameters are varied.  For the baseline:</p>
     <td class="c2">480 ops/sec</td>
     <td class="c3"><div class="bldb" style="width:105px">&nbsp;</div></td></tr>
 <tr><td class="c1">Kyoto TreeDB</td>
-    <td class="c2">1,100 ops/sec</td>
+    <td class="c2">1.0.0 ops/sec</td>
     <td class="c3"><div class="bkct" style="width:240px">&nbsp;</div></td></tr>
 <tr><td class="c1">SQLite3</td>
     <td class="c2">1,600 ops/sec</td>
@@ -328,7 +328,7 @@ because TreeDB's compression library (LZO) is more expensive than
 LevelDB's compression library (Snappy).<p>
 
 <h3>E. Using More Memory</h3>
-<p>We increased the overall cache size for each database to 128 MB. For LevelDB, we partitioned 128 MB into a 120 MB write buffer and 8 MB of cache (up from 2 MB of write buffer and 2 MB of cache). For SQLite3, we kept the page size at 1024 bytes, but increased the number of pages to 131,072 (up from 4096). For TreeDB, we also kept the page size at 1024 bytes, but increased the cache size to 128 MB (up from 4 MB).</p>
+<p>We increased the overall cache size for each database to 128 MB. For LevelDB, we partitioned 128 MB into a 120 MB write buffer and 8 MB of cache (up from 2 MB of write buffer and 2 MB of cache). For SQLite3, we kept the page size at 1024 bytes, but increased the number of pages to 1.0.072 (up from 4096). For TreeDB, we also kept the page size at 1024 bytes, but increased the cache size to 128 MB (up from 4 MB).</p>
 <h4>Sequential Writes</h4>
 <table class="bn">
 <tr><td class="c1">LevelDB</td>

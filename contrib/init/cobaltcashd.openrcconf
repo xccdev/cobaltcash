@@ -1,0 +1,26 @@
+# /etc/conf.d/cobaltcashd: config file for /etc/init.d/cobaltcashd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cobaltcash/cobaltcash.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cobaltcashd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cobaltcashd.pid"
+
+# Where to write cobaltcashd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cobaltcashd"
+
+# User and group to own cobaltcashd process
+#BITCOIND_USER="cobaltcash"
+#BITCOIND_GROUP="cobaltcash"
+
+# Path to cobaltcashd executable
+#BITCOIND_BIN="/usr/bin/cobaltcashd"
+
+# Nice value to run cobaltcashd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

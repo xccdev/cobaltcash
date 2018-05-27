@@ -105,15 +105,15 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Bitcoin Green: 1 day
-        nTargetSpacing = 2 * 60;  // Bitcoin Green: 2 minutes
+        nTargetTimespan = 1 * 60; // Cobalt Cash: 1 day
+        nTargetSpacing = 2 * 60;  // Cobalt Cash: 2 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 210000000 * COIN;
+        nMaxMoneyOut = 21000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 1680;
-        nModifierUpdateBlock = 1; // we use the version 2 for BITG
+        nLastPOWBlock = 200;
+        nModifierUpdateBlock = 1; // we use the version 2 for XCC
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -156,17 +156,17 @@ public:
         vSeeds.push_back(CDNSSeedData("seed2.savebitcoin.io", "seed2.savebitcoin.io"));
         vSeeds.push_back(CDNSSeedData("seed3.savebitcoin.io", "seed3.savebitcoin.io"));
 
-        // Bitcoin Green addresses start with 'G'
+        // Cobalt Cash addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
-        // Bitcoin Green script addresses start with '3'
+        // Cobalt Cash script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
-        // Bitcoin Green private keys start with 'K'
+        // Cobalt Cash private keys start with 'K'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 46);
-        // Bitcoin Green BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Cobalt Cash BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Bitcoin Green BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Cobalt Cash BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // Bitcoin Green BIP44 coin type is '222' (0x800000de)
+        // Cobalt Cash BIP44 coin type is '222' (0x800000de)
         // BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0xde).convert_to_container<std::vector<unsigned char> >();
 
@@ -216,13 +216,13 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Bitcoin Green: 1 day
-        nTargetSpacing = 2 * 60;  // Bitcoin Green: 1 minute
-        nLastPOWBlock = 42000;
+        nTargetTimespan = 1 * 60; // Cobalt Cash: 1 day
+        nTargetSpacing = 2 * 60;  // Cobalt Cash: 1 minute
+        nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 210000000 * COIN;
+        nMaxMoneyOut = 21000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1516926684;
@@ -234,17 +234,17 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Bitcoin Green addresses start with 'g'
+        // Testnet Cobalt Cash addresses start with 'g'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
-        // Testnet Bitcoin Green script addresses start with '5' or '6'
+        // Testnet Cobalt Cash script addresses start with '5' or '6'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
         // Testnet private keys start with 'k'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 108);
-        // Testnet Bitcoin Green BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Cobalt Cash BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Bitcoin Green BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Cobalt Cash BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet bitcoin green BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet cobalt cash BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
@@ -290,8 +290,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Bitcoin Green: 1 day
-        nTargetSpacing = 2 * 60;        // Bitcoin Green: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // Cobalt Cash: 1 day
+        nTargetSpacing = 2 * 60;        // Cobalt Cash: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1516926684;
         genesis.nBits = 0x207fffff;

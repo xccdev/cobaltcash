@@ -16,7 +16,7 @@
 CActiveMasternode activeMasternode;
 
 //
-// Bootup the Masternode, look for a BITG collateral input and register on the network
+// Bootup the Masternode, look for a XCC collateral input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {

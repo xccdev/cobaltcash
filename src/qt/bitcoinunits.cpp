@@ -19,18 +19,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BITG);
-    unitlist.append(mBITG);
-    unitlist.append(uBITG);
+    unitlist.append(XCC);
+    unitlist.append(mXCC);
+    unitlist.append(uXCC);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case BITG:
-    case mBITG:
-    case uBITG:
+    case XCC:
+    case mXCC:
+    case uXCC:
         return true;
     default:
         return false;
@@ -40,12 +40,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case BITG:
-        return QString("bitg");
-    case mBITG:
-        return QString("mbitg");
-    case uBITG:
-        return QString::fromUtf8("ubitg");
+    case XCC:
+        return QString("xcc");
+    case mXCC:
+        return QString("mxcc");
+    case uXCC:
+        return QString::fromUtf8("uxcc");
     default:
         return QString("???");
     }
@@ -55,23 +55,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BITG:
-            return QString("BITG");
-        case mBITG:
-            return QString("mBITG");
-        case uBITG:
-            return QString::fromUtf8("μBITG");
+        case XCC:
+            return QString("XCC");
+        case mXCC:
+            return QString("mXCC");
+        case uXCC:
+            return QString::fromUtf8("μXCC");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BITG:
-            return QString("tBITG");
-        case mBITG:
-            return QString("mtBITG");
-        case uBITG:
-            return QString::fromUtf8("μtBITG");
+        case XCC:
+            return QString("tXCC");
+        case mXCC:
+            return QString("mtXCC");
+        case uXCC:
+            return QString::fromUtf8("μtXCC");
         default:
             return QString("???");
         }
@@ -82,23 +82,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BITG:
-            return QString("BITG");
-        case mBITG:
-            return QString("Milli-BITG (1 / 1" THIN_SP_UTF8 "000)");
-        case uBITG:
-            return QString("Micro-BITG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case XCC:
+            return QString("XCC");
+        case mXCC:
+            return QString("Milli-XCC (1 / 1" THIN_SP_UTF8 "000)");
+        case uXCC:
+            return QString("Micro-XCC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BITG:
-            return QString("TestBITGs");
-        case mBITG:
-            return QString("Milli-TestBITG (1 / 1" THIN_SP_UTF8 "000)");
-        case uBITG:
-            return QString("Micro-TestBITG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case XCC:
+            return QString("TestXCCs");
+        case mXCC:
+            return QString("Milli-TestXCC (1 / 1" THIN_SP_UTF8 "000)");
+        case uXCC:
+            return QString("Micro-TestXCC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -108,11 +108,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case BITG:
+    case XCC:
         return 100000000;
-    case mBITG:
+    case mXCC:
         return 100000;
-    case uBITG:
+    case uXCC:
         return 100;
     default:
         return 100000000;
@@ -122,11 +122,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case BITG:
+    case XCC:
         return 8;
-    case mBITG:
+    case mXCC:
         return 5;
-    case uBITG:
+    case uXCC:
         return 2;
     default:
         return 0;

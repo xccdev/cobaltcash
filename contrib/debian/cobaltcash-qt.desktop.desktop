@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CobaltCash
+Comment=CobaltCash P2P Cryptocurrency
+Exec=cobaltcash-qt %u
+Terminal=false
+Type=Application
+Icon=cobaltcash128
+MimeType=x-scheme-handler/cobaltcash;
+Categories=Office;Finance;
+Name[en_US]=cobaltcash-qt.desktop

@@ -45,7 +45,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "Bitcoin Green cannot be compiled without assertions."
+#error "Cobalt Cash cannot be compiled without assertions."
 #endif
 
 // 6 comes from OPCODE (1) + vch.size() (1) + BIGNUM size (4)
@@ -79,7 +79,7 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 60 * 60;
 int64_t nReserveBalance = 0;
 
-/** Fees smaller than this (in ubitg) are considered zero fee (for relaying and mining)
+/** Fees smaller than this (in uxcc) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
  */
@@ -1621,22 +1621,23 @@ int64_t GetBlockValue(int nHeight)
         if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 0)
             return 50000 * COIN;
     }
+
     if (nHeight < Params().LAST_POW_BLOCK())
         nSubsidy = 2500 * COIN;
-    else if (nHeight <= 1050000)
-        nSubsidy = 100 * COIN;
+    else if (nHeight <= 5000)
+        nSubsidy = 1 * COIN;
+    else if (nHeight > 5000 && nHeight <= 25000)
+        nSubsidy = 30 * COIN;
+    else if (nHeight > 25000 && nHeight <= 100000)
+        nSubsidy = 20 * COIN;
+    else if (nHeight > 100000 && nHeight <= 1050000)
+        nSubsidy = 10 * COIN;
     else if (nHeight > 1050000 && nHeight <= 2100000)
-        nSubsidy = 50 * COIN;
+        nSubsidy = 5 * COIN;
     else if (nHeight > 2100000 && nHeight <= 3150000)
-        nSubsidy = 25 * COIN;
-    else if (nHeight > 3150000 && nHeight <= 4200000)
-        nSubsidy = 12.5 * COIN;
-    else if (nHeight > 4200000 && nHeight <= 5250000)
-        nSubsidy = 6.25 * COIN;
-    else if (nHeight > 5250000 && nHeight <= 6300000)
-        nSubsidy = 3.12 * COIN;
+        nSubsidy = 2.5 * COIN;
     else
-        nSubsidy = 1.56 * COIN;
+        nSubsidy = 1.25 * COIN;
 
     // Check if we reached the coin max supply.
     int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -1659,7 +1660,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         return 0;
 
     // Check if we reached coin supply
-    ret = blockValue * 0.50; // 50% of block reward
+    ret = blockValue * 0.85; // 85% of block reward
 
     return ret;
 }
@@ -2049,7 +2050,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("bitcoingreen-scriptch");
+    RenameThread("cobaltcash-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3145,7 +3146,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // BITG
+        // XCC
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.
@@ -3274,7 +3275,7 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
         }
 
     // Enforce block.nVersion=2 rule that the coinbase starts with serialized block height
-    // if 750 of the last 1,000 blocks are version 2 or greater (51/100 if testnet):
+    // if 750 of the last 1,000 blocks are version 2 or greater (51.0.0 if testnet):
     if (block.nVersion >= 2 &&
         CBlockIndex::IsSuperMajority(2, pindexPrev, Params().EnforceBlockUpgradeMajority())) {
         CScript expect = CScript() << nHeight;
@@ -4578,7 +4579,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             return false;
         }
 
-        // BITG: We use certain sporks during IBD, so check to see if they are
+        // XCC: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) &&
                 !pSporkDB->SporkExists(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2);

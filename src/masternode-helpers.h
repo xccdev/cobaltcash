@@ -17,7 +17,7 @@ class CMasternodeSigner
 public:
     CScript collateralPubKey;
 
-    /// Is the inputs associated with this public key? (and there is BITG collateral - checking if valid masternode)
+    /// Is the inputs associated with this public key? (and there is XCC collateral - checking if valid masternode)
     bool IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey);
     /// Set the private/public key values, returns true if successful
     bool GetKeysFromSecret(std::string strSecret, CKey& keyRet, CPubKey& pubkeyRet);

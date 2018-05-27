@@ -19,7 +19,7 @@ void ThreadMasternodePool()
     if (fLiteMode) return; //disable all Masternode related functionality
 
     // Make this thread recognisable
-    RenameThread("bitcoingreen-mnpool");
+    RenameThread("cobaltcash-mnpool");
 
     unsigned int c = 0;
 

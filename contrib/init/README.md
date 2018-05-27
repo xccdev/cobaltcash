@@ -1,10 +1,10 @@
 Sample configuration files for:
 
-SystemD: bitcoingreend.service
-Upstart: bitcoingreend.conf
-OpenRC:  bitcoingreend.openrc
-         bitcoingreend.openrcconf
-CentOS:  bitcoingreend.init
+SystemD: cobaltcashd.service
+Upstart: cobaltcashd.conf
+OpenRC:  cobaltcashd.openrc
+         cobaltcashd.openrcconf
+CentOS:  cobaltcashd.init
 
 have been made available to assist packagers in creating node packages here.
 

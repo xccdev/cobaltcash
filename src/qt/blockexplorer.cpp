@@ -550,7 +550,7 @@ void BlockExplorer::setBlock(CBlockIndex* pBlock)
 
 void BlockExplorer::setContent(const std::string& Content)
 {
-    QString CSS = "body {font-size:12px; color:#f8f6f6; bgcolor:#fafafa;}\n a, span { font-family: monospace; }\n span.addr {color:#fafafa; font-weight: bold;}\n table tr td {padding: 3px; border: 1px solid black; background-color: #fafafa;}\n td.d0 {font-weight: bold; color:#f8f6f6;}\n h2, h3 { white-space:nowrap; color:#fafafa;}\n a { color:#88f6f6; text-decoration:none; }\n a.nav {color:#fafafa;}\n";
+    QString CSS = "body {font-size:12px; color:#000000; bgcolor:#fff;}\n a, span { font-family: monospace; }\n span.addr {color:#000000; font-weight: bold;}\n table tr td {padding: 3px; border: 1px solid black; background-color: #fff;}\n td.d0 {font-weight: bold; color:#000000;}\n h2, h3 { white-space:nowrap; color:#000000;}\n a { color:#191970; text-decoration:none; }\n a.nav {color:#E278AF;}\n";
     QString FullContent = "<html><head><style type=\"text/css\">" + CSS + "</style></head>" + "<body>" + Content.c_str() + "</body></html>";
     // printf(FullContent.toUtf8());
 
@@ -584,3 +584,4 @@ void BlockExplorer::updateNavButtons()
     ui->back->setEnabled(m_HistoryIndex - 1 >= 0);
     ui->forward->setEnabled(m_HistoryIndex + 1 < m_History.size());
 }
+

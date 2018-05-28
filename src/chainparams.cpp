@@ -109,10 +109,10 @@ public:
         nTargetSpacing = 2 * 60;  // Cobalt Cash: 2 minutes
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 210000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 1680;
         nModifierUpdateBlock = 1; // we use the version 2 for XCC
 
         /**
@@ -218,11 +218,11 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Cobalt Cash: 1 day
         nTargetSpacing = 2 * 60;  // Cobalt Cash: 1 minute
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 42000;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 210000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1516926684;
@@ -403,3 +403,4 @@ bool SelectParamsFromCommandLine()
     SelectParams(network);
     return true;
 }
+

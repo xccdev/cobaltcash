@@ -119,20 +119,20 @@ public:
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
          *
-         * python ~/genesis.py -a quark-hash -z "Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners" -t 1516926684 -v 0 -p 04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363
-         * 04ffff001d01042642544320426c6f636b20353031353932202d20323031372d31322d32392031353a34333a3337
-         * algorithm: quark-hash
-         * merkle hash: 07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf
-         * pszTimestamp: Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners
-         * pubkey: 04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363
-         * time: 1516926684
-         * bits: 0x1e0ffff0
-         * Searching for genesis hash..
-         * 16525.0 hash/s, estimate: 72.2 hgenesis hash found!
-         * nonce: 21256609
-         * genesis_hash: 000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b
+	python genesis.py -z "Cobalt Cash Is A PoS Coin, Supported By A very Strong Community" -n 21255512  -t 1527583192 -v 0 -p 04678afdb0fe554fab8067f1a67130b7105cad6a828e01f8a67962e0ea1f6decca649f6bc3f4ce3f6e4f35504e51ec112d92884df7ba0b8d578a4c702b6bf12d89
+	04ffff001d01043f436f62616c742043617368204973204120506f5320436f696e2c20537570706f7274656420427920412076657279205374726f6e6720436f6d6d756e697479
+	algorithm: SHA256
+	merkle hash: f135e6b1136e8e6bb1d86ef376b07695fa1c43ea888e6fac0a8fa6aaa6d97766
+	pszTimestamp: Cobalt Cash Is A PoS Coin, Supported By A very Strong Community
+	pubkey: 04678afdb0fe554fab8067f1a67130b7105cad6a828e01f8a67962e0ea1f6decca649f6bc3f4ce3f6e4f35504e51ec112d92884df7ba0b8d578a4c702b6bf12d89
+	time: 1527583192
+	bits: 0x1d00ffff
+	Searching for genesis hash..
+	226296.0 hash/s, estimate: 5.3 hgenesis hash found!
+	nonce: 2647337164
+	genesis hash: 00000000c5d25d770e1ac8009868c6c0765cf4592efce39757c0c14fb7f9d583
          */
-        const char* pszTimestamp = "Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners";
+        const char* pszTimestamp = "Cobalt Cash Is a PoS Coin, Supported By A Strong Community";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -143,13 +143,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1516926684;
+        genesis.nTime = 1527583192;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21256609;
+        genesis.nNonce = 2647337164;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b"));
-        assert(genesis.hashMerkleRoot == uint256("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
+        assert(hashGenesisBlock == uint256("00000000c5d25d770e1ac8009868c6c0765cf4592efce39757c0c14fb7f9d583"));
+        assert(genesis.hashMerkleRoot == uint256("f135e6b1136e8e6bb1d86ef376b07695fa1c43ea888e6fac0a8fa6aaa6d97766"));
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("seed1.savebitcoin.io", "seed1.savebitcoin.io"));

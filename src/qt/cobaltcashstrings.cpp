@@ -203,10 +203,10 @@ QT_TRANSLATE_NOOP("cobaltcash-core", ""
 QT_TRANSLATE_NOOP("cobaltcash-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("cobaltcash-core", "(9333 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("cobaltcash-core", "(7333 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("cobaltcash-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("cobaltcash-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("cobaltcash-core", "(must be 9333 for mainnet)"),
+QT_TRANSLATE_NOOP("cobaltcash-core", "(must be 7333 for mainnet)"),
 QT_TRANSLATE_NOOP("cobaltcash-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("cobaltcash-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("cobaltcash-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

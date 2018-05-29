@@ -8,7 +8,7 @@ Cobalt Cash (XCC) is a sustainable cryptocurrency modeled after Satoshi Nakamoto
   technology used to secure the network and provide the above features, each Masternode is secured
   with a collateral of 50,000 XCC.
 
-More information at [savebitcoin.io](http://www.savebitcoin.io)
+More information at [savebitcoin.io](https://www.eterbase.com/)
 
 ### Coin Specs
 | Block Time                  | 60 Seconds      |

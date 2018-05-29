@@ -1,8 +1,7 @@
 Source: cobaltcash
 Section: utils
 Priority: optional
-Maintainer: Jonas Smedegaard <dr@jones.dk> ***TODO***
-Uploaders: Micah Anderson <micah@debian.org> ***TODO***
+Maintainer: Jonas Smedegaard <maher.ben@foton-it.com> ***TODO***
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -22,7 +21,7 @@ Build-Depends: debhelper,
  libqrencode-dev,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
-Homepage: http://www.savebitcoin.io
+Homepage: https://www.eterbase.com/
 Vcs-Git: git://github.com/cobaltcash/cobaltcash.git
 Vcs-Browser: http://github.com/cobaltcash/cobaltcash
 

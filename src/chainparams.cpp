@@ -92,11 +92,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x54;
-        pchMessageStart[1] = 0xdc;
-        pchMessageStart[2] = 0x12;
-        pchMessageStart[3] = 0xae;
-        vAlertPubKey = ParseHex("045ad6f1551c2367f81c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
+        pchMessageStart[0] = 0x65;
+        pchMessageStart[1] = 0xed;
+        pchMessageStart[2] = 0x23;
+        pchMessageStart[3] = 0xbe;
+        vAlertPubKey = ParseHex("040ff43bb979fdac84c05b970a3ae8f54f839dcab2d067ae7b1343477a560a766a2071d9b9d552a80ccab216a14d6252b488c564d1d07b55ec06ae98b53dcc7f5f");
         nDefaultPort = 7333;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 1050000;
@@ -125,7 +125,7 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("047825bb1d6a59ac78a04dbdf6168da24ec6e996cacbaef2c7be7a6fb3b222f9b6dff3f43992f50f233e4c10371125c6b2baaebb30725fb11e36ba401a7c14732e") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -193,11 +193,11 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x4a;
-        pchMessageStart[1] = 0x2d;
-        pchMessageStart[2] = 0x32;
-        pchMessageStart[3] = 0xbc;
-        vAlertPubKey = ParseHex("04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363");
+        pchMessageStart[0] = 0x5b;
+        pchMessageStart[1] = 0x3e;
+        pchMessageStart[2] = 0x43;
+        pchMessageStart[3] = 0xcd;
+        vAlertPubKey = ParseHex("049950db6d14a6888bdf233f7730c1265f6a6127a0a0e753dc31b7b015a01daf74938ea96e593a24c74a692ca6410687d038b50a4a10b998b0a484137e420a3827");
         nDefaultPort = 17333;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -268,10 +268,10 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
         strNetworkID = "regtest";
-        pchMessageStart[0] = 0x20;
-        pchMessageStart[1] = 0xee;
-        pchMessageStart[2] = 0x32;
-        pchMessageStart[3] = 0xbc;
+        pchMessageStart[0] = 0x31;
+        pchMessageStart[1] = 0x11;
+        pchMessageStart[2] = 0x43;
+        pchMessageStart[3] = 0xcd;
         nSubsidyHalvingInterval = 150;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;

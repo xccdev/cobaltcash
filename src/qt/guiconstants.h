@@ -49,9 +49,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "BitcoinGreen"
+#define QAPP_ORG_NAME "CobaltCash"
 #define QAPP_ORG_DOMAIN "savebitcoin.io"
-#define QAPP_APP_NAME_DEFAULT "BitcoinGreen-Qt"
-#define QAPP_APP_NAME_TESTNET "BitcoinGreen-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "CobaltCash-Qt"
+#define QAPP_APP_NAME_TESTNET "CobaltCash-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

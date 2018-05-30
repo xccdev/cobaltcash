@@ -53,7 +53,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x05613623e3c42d416c79f4ef3d5e5a0a7b2fca29a19dab1f8601db7cf0d575ca"));
+    (0, uint256("0x4db88f981ef76493eb3b7560b33ea6c025b2ed018573b0592cf854c5693b8e08"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -64,7 +64,7 @@ static const Checkpoints::CCheckpointData data = {
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
-    boost::assign::map_list_of(0, uint256("0xc3824b90979ba077eb66437713fa4772797db46566ab762deaf74c93c6bb2090"));
+    boost::assign::map_list_of(0, uint256("0x67f71e1e251e4e7ed96e721f3bf3227dd01b80717566a99acab037be6786739f"));
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
@@ -73,7 +73,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
     250};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
-    boost::assign::map_list_of(0, uint256("0xfe11969f5cefb109e979a42bb3201c288c6cd129007849652c998e8b863e6614"));
+    boost::assign::map_list_of(0, uint256("0x268089e5a189351570d427cec0fd1b4b93f989f02757cb0aa8500293b6fa8e3e"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1527653189,
@@ -119,7 +119,7 @@ public:
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
          */
-        const char* pszTimestamp = "Cobalt Cash Is a PoS Coin, Supported By A Strong Community";
+        const char* pszTimestamp = "CobaltCash | Community Coin";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -135,8 +135,8 @@ public:
         genesis.nNonce = 50000;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x05613623e3c42d416c79f4ef3d5e5a0a7b2fca29a19dab1f8601db7cf0d575ca"));
-        assert(genesis.hashMerkleRoot == uint256("0xfd4c15278e4d0ee8a06e82b1533d242fcffc8f3e361c9f5b8cb6b59d699dfe04"));
+        assert(hashGenesisBlock == uint256("0x4db88f981ef76493eb3b7560b33ea6c025b2ed018573b0592cf854c5693b8e08"));
+        assert(genesis.hashMerkleRoot == uint256("0x7566ab036b8a4bb82cc4982b67a2e1a25b749de1229cc38501d3622cb8f89c05"));
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("seed1.savebitcoin.io", "seed1.savebitcoin.io"));
@@ -216,7 +216,7 @@ public:
         genesis.nNonce = 6000;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0xc3824b90979ba077eb66437713fa4772797db46566ab762deaf74c93c6bb2090"));
+        assert(hashGenesisBlock == uint256("0x67f71e1e251e4e7ed96e721f3bf3227dd01b80717566a99acab037be6786739f"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -286,7 +286,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 27333;
-        assert(hashGenesisBlock == uint256("0xfe11969f5cefb109e979a42bb3201c288c6cd129007849652c998e8b863e6614"));
+        assert(hashGenesisBlock == uint256("0x268089e5a189351570d427cec0fd1b4b93f989f02757cb0aa8500293b6fa8e3e"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.

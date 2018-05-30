@@ -581,12 +581,12 @@ bool DHMSTableWidgetItem::operator<(QTableWidgetItem const& item) const
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "BitcoinGreen.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "CobaltCash.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for BitcoinGreen.lnk
+    // check for CobaltCash.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -699,7 +699,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a cobaltcash.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=BitcoinGreen\n";
+        optionFile << "Name=CobaltCash\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

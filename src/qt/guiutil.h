@@ -30,7 +30,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the BitcoinGreen Qt UI.
+/** Utility functions used by the CobaltCash Qt UI.
  */
 namespace GUIUtil
 {

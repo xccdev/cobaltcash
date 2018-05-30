@@ -22,7 +22,7 @@ Unpack the files into a directory, and then run cobaltcash-qt.exe.
 
 ### OSX
 
-Drag BitcoinGreen-Qt to your applications folder, and then run BitcoinGreen-Qt.
+Drag CobaltCash-Qt to your applications folder, and then run CobaltCash-Qt.
 
 ### Need Help?
 

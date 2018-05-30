@@ -53,30 +53,30 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b"));
+    (0, uint256("0x05613623e3c42d416c79f4ef3d5e5a0a7b2fca29a19dab1f8601db7cf0d575ca"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1516926684, // * UNIX timestamp of last checkpoint block
+    1527583192, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
-    boost::assign::map_list_of(0, uint256("0x001"));
+    boost::assign::map_list_of(0, uint256("0xc3824b90979ba077eb66437713fa4772797db46566ab762deaf74c93c6bb2090"));
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1740710,
+    1527652819,
     0,
     250};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
-    boost::assign::map_list_of(0, uint256("0x001"));
+    boost::assign::map_list_of(0, uint256("0xfe11969f5cefb109e979a42bb3201c288c6cd129007849652c998e8b863e6614"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1454124731,
+    1527653189,
     0,
     100};
 
@@ -118,19 +118,6 @@ public:
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
-         *
-	python genesis.py -z "Cobalt Cash Is A PoS Coin, Supported By A very Strong Community" -n 21255512  -t 1527583192 -v 0 -p 04678afdb0fe554fab8067f1a67130b7105cad6a828e01f8a67962e0ea1f6decca649f6bc3f4ce3f6e4f35504e51ec112d92884df7ba0b8d578a4c702b6bf12d89
-	04ffff001d01043f436f62616c742043617368204973204120506f5320436f696e2c20537570706f7274656420427920412076657279205374726f6e6720436f6d6d756e697479
-	algorithm: SHA256
-	merkle hash: f135e6b1136e8e6bb1d86ef376b07695fa1c43ea888e6fac0a8fa6aaa6d97766
-	pszTimestamp: Cobalt Cash Is A PoS Coin, Supported By A very Strong Community
-	pubkey: 04678afdb0fe554fab8067f1a67130b7105cad6a828e01f8a67962e0ea1f6decca649f6bc3f4ce3f6e4f35504e51ec112d92884df7ba0b8d578a4c702b6bf12d89
-	time: 1527583192
-	bits: 0x1d00ffff
-	Searching for genesis hash..
-	226296.0 hash/s, estimate: 5.3 hgenesis hash found!
-	nonce: 2647337164
-	genesis hash: 00000000c5d25d770e1ac8009868c6c0765cf4592efce39757c0c14fb7f9d583
          */
         const char* pszTimestamp = "Cobalt Cash Is a PoS Coin, Supported By A Strong Community";
         CMutableTransaction txNew;
@@ -145,11 +132,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1527583192;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 2647337164;
+        genesis.nNonce = 50000;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000000c5d25d770e1ac8009868c6c0765cf4592efce39757c0c14fb7f9d583"));
-        assert(genesis.hashMerkleRoot == uint256("f135e6b1136e8e6bb1d86ef376b07695fa1c43ea888e6fac0a8fa6aaa6d97766"));
+        assert(hashGenesisBlock == uint256("0x05613623e3c42d416c79f4ef3d5e5a0a7b2fca29a19dab1f8601db7cf0d575ca"));
+        assert(genesis.hashMerkleRoot == uint256("0xfd4c15278e4d0ee8a06e82b1533d242fcffc8f3e361c9f5b8cb6b59d699dfe04"));
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("seed1.savebitcoin.io", "seed1.savebitcoin.io"));
@@ -210,7 +197,7 @@ public:
         pchMessageStart[1] = 0x2d;
         pchMessageStart[2] = 0x32;
         pchMessageStart[3] = 0xbc;
-        vAlertPubKey = ParseHex("041b2b4c86273359acac3522471911ed2b303eaab65e8a1de01c06e89f2eab1e55234a4b504f3ce20c6f661f007d0ca15623b4358d9855c7c8ba793a24fa315e22");
+        vAlertPubKey = ParseHex("04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363");
         nDefaultPort = 17333;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -225,11 +212,11 @@ public:
         nMaxMoneyOut = 210000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1516926684;
-        genesis.nNonce = 21256609;
+        genesis.nTime = 1527652819;
+        genesis.nNonce = 6000;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b"));
+        assert(hashGenesisBlock == uint256("0xc3824b90979ba077eb66437713fa4772797db46566ab762deaf74c93c6bb2090"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -293,13 +280,13 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Cobalt Cash: 1 day
         nTargetSpacing = 2 * 60;        // Cobalt Cash: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1516926684;
+        genesis.nTime = 1527653189;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 20542300;
+        genesis.nNonce = 120000;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 27333;
-        assert(hashGenesisBlock == uint256("0x229874aa8a92df3347600978e226ba57bc994b9fa291ea50519afafca2d50ed3"));
+        assert(hashGenesisBlock == uint256("0xfe11969f5cefb109e979a42bb3201c288c6cd129007849652c998e8b863e6614"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.

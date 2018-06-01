@@ -141,8 +141,8 @@ public:
         // DNS Seeding
         // vSeeds.push_back(CDNSSeedData("seed1.cobaltcash.io", "seed1.cobaltcash.io"));
 
-        // Cobalt Cash addresses start with 'G'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
+        // Cobalt Cash addresses start with 'C'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28);
         // Cobalt Cash script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
         // Cobalt Cash private keys start with 'K'

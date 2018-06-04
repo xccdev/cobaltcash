@@ -219,8 +219,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Cobalt Cash addresses start with 'g'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
+        // Testnet Cobalt Cash addresses start with 'c'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 88);
         // Testnet Cobalt Cash script addresses start with '5' or '6'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
         // Testnet private keys start with 'k'

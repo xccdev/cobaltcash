@@ -139,7 +139,7 @@ public:
 	assert(genesis.hashMerkleRoot == uint256("0x54a47c3b3fab27a7ca207563990fefa363d5c4ef38c59481505b91f43cbcbd3f"));
 
         // DNS Seeding
-        // vSeeds.push_back(CDNSSeedData("seed1.cobaltcash.io", "seed1.cobaltcash.io"));
+        //vSeeds.push_back(CDNSSeedData("seed1.cobaltcash.io", "seed1.cobaltcash.io"));
 
         // Cobalt Cash addresses start with 'C'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28);

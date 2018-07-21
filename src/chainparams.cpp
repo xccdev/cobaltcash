@@ -108,7 +108,7 @@ public:
         nTargetTimespan = 1 * 60; // Cobalt Cash: 1 day
         nTargetSpacing = 2 * 60;  // Cobalt Cash: 2 minutes
         nMaturity = 10;
-        nMasternodeCountDrift = 10;
+        nMasternodeCountDrift = 5;
         nMaxMoneyOut = 210000000 * COIN;
 
         /** Height or Time Based Activations **/
